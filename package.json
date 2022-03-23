@@ -1,6 +1,6 @@
 {
   "name": "@devilswheel/devils-wheel-abi",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Solidity contracts and game ABI for DevilsWheel.win",
   "main": "dist/index.js",
   "dependencies": {
@@ -21,7 +21,7 @@
     "compile": "./node_modules/.bin/truffle compile",
     "package": "node scripts/package-builder.js",
     "build": "npx hardhat compile",
-    "deploy": "npx hardhat run --network mumbai scripts/deploy.js"
+    "deploy": "npx hardhat run --network polygon scripts/deploy.js"
   },
   "repository": {
     "type": "git",

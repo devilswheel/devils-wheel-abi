@@ -62,11 +62,11 @@ contract DevilsWheel is VRFConsumerBase, ERC20, Ownable {
   uint256 public minLiquidityMultiplier = 50;
   uint8 public constant INVALID_RESULT = 99;
 
-  bytes32 internal keyHash = 0x6e75b569a01ef56d18cab6a8e71e6600d6ce853834d4a5748b720d06f878b3a4;
+  bytes32 internal keyHash = 0xf86195cf7690c55907b2b611ebb7343a6f649bff128701cc542f0569e2c549da;
   uint256 internal fee = 100000000000000;
-  address bet_token = 0xbc7948B5d3A9eEd2D04F7f3B443a0bd22B6D9255;
-  address vrfCoordinator = 0x8C7382F9D8f56b33781fE506E897a4F1e2d17255;
-  address link = 0x326C977E6efc84E512bB9C30f76E30c160eD06FB;
+  address public bet_token = 0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063;
+  address public vrfCoordinator = 0x3d2341ADb2D31f1c5530cDC622016af293177AE0;
+  address public link = 0xb0897686c545045aFc77CF20eC7A532E3120E0F1;
 
   uint8[18] private RED_NUMBERS = [
     1, 3, 5, 7, 9, 12, 14, 16, 18,
@@ -88,7 +88,7 @@ contract DevilsWheel is VRFConsumerBase, ERC20, Ownable {
 
   constructor()
     ERC20(
-      "DEVILS SHARE",
+      "DEVILS CUT",
       "DEVL"
     ) 
     VRFConsumerBase(
@@ -116,7 +116,7 @@ contract DevilsWheel is VRFConsumerBase, ERC20, Ownable {
   {
     require(
       balanceOf(msg.sender) > 0,
-      "Your don't have liquidity"
+      "You don't have liquidity"
     );
 
     uint256 sender_shares = balanceOf(msg.sender);

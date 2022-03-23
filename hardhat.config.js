@@ -13,14 +13,14 @@ module.exports = {
     },
   },
   networks: {
-    mumbai: {
+    polygon: {
       url: secret.url,
       accounts: [secret.key],
     },
   },
   etherscan: {
     apiKey: {
-      polygonMumbai: secret.polygonscankey,
+      polygon: secret.polygonscankey,
     },
   },
 };
